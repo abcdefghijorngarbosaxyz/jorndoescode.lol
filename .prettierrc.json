@@ -1,0 +1,10 @@
+{
+  "useTabs": false,
+  "bracketSameLine": true,
+  "bracketSpacing": true,
+  "endOfLine": "lf",
+  "semi": true,
+  "jsxSingleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "singleQuote": true
+}
