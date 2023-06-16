@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
-  '@remix-run/css-bundle':
-    specifier: ^1.17.1
-    version: 1.17.1
   '@remix-run/node':
     specifier: ^1.17.1
     version: 1.17.1
@@ -1820,10 +1817,6 @@ packages:
       picocolors: 1.0.0
       tslib: 2.5.3
     dev: true
-
-  /@remix-run/css-bundle@1.17.1:
-    resolution: {integrity: sha512-++aULPl14ba0prI8pF5tA607CvOuRy8a9oFtfoD+WvxcEQoE8ZE6qeBGsk4Cs8p9y7fYYag0aNG+TQILHhJ0Xw==}
-    dev: false
 
   /@remix-run/dev@1.17.1(@remix-run/serve@1.17.1)(@types/node@14.18.33):
     resolution: {integrity: sha512-HW6y9Ki3+3LsrqhGngHwK3CSZ91Zcfrp8JNIMQQBq083+PprStsoyEenZye3rFacjeBMjDzhfRfFn2QFuDcVhg==}
