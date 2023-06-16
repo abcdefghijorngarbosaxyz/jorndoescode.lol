@@ -1,12 +1,15 @@
 import type { Config } from 'tailwindcss';
+import { fontFamily } from 'tailwindcss/defaultTheme';
 
 export default {
-  corePlugins: {
-    preflight: false,
-  },
   content: ['./app/**/*.{js,jsx,ts,tsx}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['Inter', ...fontFamily.sans],
+        serif: ['Newsreader', ...fontFamily.serif]
+      }
+    }
   },
-  plugins: [],
+  plugins: []
 } satisfies Config;

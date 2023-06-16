@@ -38,7 +38,7 @@ const Document = ({ children }: PropsWithChildren) => {
         />
         <meta
           property='og:image'
-          content='https://www.jorndoescode.lol/assets/images/share.png'
+          content='https://www.jorndoescode.lol/share.png'
         />
         <meta property='og:image:type' content='image/png' />
         <meta property='og:image:width' content='1200' />
@@ -52,33 +52,29 @@ const Document = ({ children }: PropsWithChildren) => {
         />
         <meta
           property='twitter:image'
-          content='https://www.jorndoescode.lol/assets/images/share.png'
+          content='https://www.jorndoescode.lol/share.png'
         />
         <Meta />
         <link rel='canonical' href='https://www.jorndoescode.lol' />
         <link
           rel='apple-touch-icon'
           sizes='180x180'
-          href='/assets/images/apple-touch-icon.png'
+          href='/apple-touch-icon.png'
         />
         <link
           rel='icon'
           type='image/png'
           sizes='32x32'
-          href='/assets/images/favicon-32x32.png'
+          href='/favicon-32x32.png'
         />
         <link
           rel='icon'
           type='image/png'
           sizes='16x16'
-          href='/assets/images/favicon-16x16.png'
+          href='/favicon-16x16.png'
         />
-        <link rel='manifest' href='/assets/images/site.webmanifest' />
-        <link
-          rel='mask-icon'
-          href='/assets/images/safari-pinned-tab.svg'
-          color='#5bbad5'
-        />
+        <link rel='manifest' href='/site.webmanifest' />
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
         <Links />
       </head>
       <body>
