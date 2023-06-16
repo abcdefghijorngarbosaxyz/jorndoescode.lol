@@ -6,15 +6,13 @@ import {
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration,
+  ScrollRestoration
 } from '@remix-run/react';
 import { Analytics } from '@vercel/analytics/react';
 
-export const links: LinksFunction = () => [
-  { rel: 'stylesheet', href: stylesheet },
-];
+const meta: V2_MetaFunction = () => [];
 
-export default function App() {
+const Document = ({ children }: PropsWithChildren) => {
   return (
     <html lang='en'>
       <head>
@@ -81,12 +79,31 @@ export default function App() {
         <Links />
       </head>
       <body>
+        {children}
         <Analytics />
-        <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
       </body>
     </html>
   );
-}
+};
+
+const App = () => {
+  return (
+    <Document>
+      <Layout>
+        <Outlet />
+      </Layout>
+    </Document>
+  );
+};
+
+const CatchBoundary = () => {
+  const error = useRouteError();
+  console.error('Err', error);
+};
+
+export { links, meta, CatchBoundary };
+
+export default App;
