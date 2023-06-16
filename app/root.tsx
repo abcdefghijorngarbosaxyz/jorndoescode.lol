@@ -1,16 +1,19 @@
 import stylesheet from '~/tailwind.css';
-import type { LinksFunction, V2_MetaFunction } from '@remix-run/node';
+import type { LinksFunction } from '@remix-run/node';
 import {
   Links,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
+  useRouteError
 } from '@remix-run/react';
 import { Analytics } from '@vercel/analytics/react';
+import { PropsWithChildren } from 'react';
+import Layout from './root.layout';
 
-const meta: V2_MetaFunction = () => [];
+const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }];
 
 const Document = ({ children }: PropsWithChildren) => {
   return (
@@ -104,6 +107,6 @@ const CatchBoundary = () => {
   console.error('Err', error);
 };
 
-export { links, meta, CatchBoundary };
+export { links, CatchBoundary };
 
 export default App;
