@@ -71,12 +71,12 @@ blockquote {
 }
 
 a {
-  @apply text-inherit;
+  @apply text-inherit underline decoration-neutral-300 decoration-[1px] underline-offset-2 transition-[text-decoration-color,_0.2s,_ease-in-out] hover:decoration-inherit dark:decoration-neutral-600;
 }
 
 html,
 body {
-  @apply h-full bg-white font-sans font-light antialiased dark:bg-neutral-950;
+  @apply h-full bg-white font-sans font-light antialiased selection:bg-[rgb(229,_229,_229)] dark:bg-neutral-950 dark:selection:bg-[rgb(64,_64,_64)];
 
   text-rendering: optimizeLegibility;
 }
@@ -137,9 +137,13 @@ article :where(h1, h2, h3) {
 }
 
 article :where(em, i) {
-  @apply font-serif text-[calc(1em_+_1px)] font-normal italic text-[#0a0a0a] dark:text-[#ffffff];
+  @apply font-serif text-[calc(1em_+_1px)] font-normal italic;
 }
 
 article > h1 > span {
   @apply ml-2 text-xs text-[#6f6f6f] dark:text-[#a0a0a0];
+}
+
+article > blockquote {
+  @apply relative mb-7 text-[#6f6f6f] dark:text-[#a0a0a0];
 }
