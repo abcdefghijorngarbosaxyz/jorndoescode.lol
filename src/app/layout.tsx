@@ -45,7 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </main>
         </div>
         <Analytics />
-        <script type='application/json+ld' dangerouslySetInnerHTML={{ __html: schema }}></script>
+        <script type='application/ld+json' dangerouslySetInnerHTML={{ __html: schema }}></script>
       </body>
     </html>
   );
