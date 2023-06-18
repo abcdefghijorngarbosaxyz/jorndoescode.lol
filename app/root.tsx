@@ -27,18 +27,19 @@ const Document = ({ children }: PropsWithChildren) => {
         <meta property='og:site_name' content='Jorn Blaedel Garbosa' />
         <meta
           property='og:description'
-          content='Devoted to constructing refined softwares with precision and crafting remarkable web experiences.'
+          content='Delighting in the art of web development, I dance with code, weaving digital wonders that captivate and inspire.'
         />
         <meta property='og:image' content='https://www.jorndoescode.lol/share.png' />
         <meta property='og:image:type' content='image/png' />
         <meta property='og:image:width' content='2400' />
         <meta property='og:image:height' content='1256' />
+        <meta property='og:image:alt' content='Maybe an opengraph image' />
         <meta property='twitter:card' content='summary_large_image' />
         <meta property='twitter:url' content='https://www.jorndoescode.lol/' />
         <meta property='twitter:title' content='Jorn Blaedel Garbosa' />
         <meta
           property='twitter:description'
-          content='Devoted to constructing refined softwares with precision and crafting remarkable web experiences.'
+          content='Delighting in the art of web development, I dance with code, weaving digital wonders that captivate and inspire.'
         />
         <meta property='twitter:image' content='https://www.jorndoescode.lol/share.png' />
         <Meta />
