@@ -11,7 +11,7 @@ import {
 } from '@remix-run/react';
 import { Analytics } from '@vercel/analytics/react';
 import { PropsWithChildren } from 'react';
-import NotFound from './not-found.mdx';
+import { Default, NotFound, Internal } from './err';
 
 export const links: LinksFunction = () => [{ rel: 'stylesheet', href: stylesheet }];
 
@@ -21,7 +21,7 @@ const Document = ({ children }: PropsWithChildren) => {
       <head>
         <meta charSet='utf-8' />
         <meta name='viewport' content='width=device-width,initial-scale=1,viewport-fit=cover' />
-        {/* <meta property='og:type' content='website' />
+        <meta property='og:type' content='website' />
         <meta property='og:url' content='https://www.jorndoescode.lol/' />
         <meta property='og:title' content='Jorn Blaedel Garbosa' />
         <meta property='og:site_name' content='Jorn Blaedel Garbosa' />
@@ -40,14 +40,14 @@ const Document = ({ children }: PropsWithChildren) => {
           property='twitter:description'
           content='Devoted to constructing refined softwares with precision and crafting remarkable web experiences.'
         />
-        <meta property='twitter:image' content='https://www.jorndoescode.lol/share.png' /> */}
+        <meta property='twitter:image' content='https://www.jorndoescode.lol/share.png' />
         <Meta />
-        {/* <link rel='canonical' href='https://www.jorndoescode.lol' />
+        <link rel='canonical' href='https://www.jorndoescode.lol' />
         <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />
         <link rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png' />
         <link rel='manifest' href='/site.webmanifest' />
-        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' /> */}
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
         <Links />
       </head>
       <body>
@@ -64,14 +64,26 @@ const Document = ({ children }: PropsWithChildren) => {
 export const CatchBoundary = () => {
   const caught = useCatch();
 
+  let errComponent;
+
+  switch (caught.status) {
+    case 404:
+      errComponent = <NotFound />;
+      break;
+    case 500:
+      errComponent = <Internal />;
+      break;
+    default:
+      errComponent = <Default />;
+      break;
+  }
+
   return (
     <Document>
       <div>
         <main>
           <div>
-            <article>
-              <NotFound caught={caught} />
-            </article>
+            <article>{errComponent}</article>
           </div>
         </main>
       </div>
