@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    site: '/',
+    site: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? '').href,
     title: 'Jorn Blaedel Garbosa',
     description:
       'Delighting in the art of web development, I dance with code, weaving digital wonders that captivate and inspire.'

@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next';
 
-const base = 'https://www.jorndoescode.lol';
+const base = process.env.NEXT_PUBLIC_SITE_URL;
 
 const sitemap = (): MetadataRoute.Sitemap => {
   const routes = [''].map((route) => ({
