@@ -1,11 +1,11 @@
-import { MetadataRoute } from "next";
+import { MetadataRoute } from 'next';
 
-const base = "https://www.jorndoescode.lol";
+const base = 'https://www.jorndoescode.lol';
 
 const sitemap = (): MetadataRoute.Sitemap => {
-  const routes = [""].map((route) => ({
+  const routes = [''].map((route) => ({
     url: `${base}${route}`,
-    lastModified: new Date(),
+    lastModified: new Date()
   }));
 
   return [...routes];
