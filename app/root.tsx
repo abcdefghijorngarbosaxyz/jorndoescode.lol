@@ -42,6 +42,10 @@ const Document = ({ children }: PropsWithChildren) => {
           content='Delighting in the art of web development, I dance with code, weaving digital wonders that captivate and inspire.'
         />
         <meta property='twitter:image' content='https://www.jorndoescode.lol/share.png' />
+        <meta
+          name='google-site-verification'
+          content='WdslNAxSJ1X3zg3p4bBOnmrt6f2EdDWskkERRtmVU8k'
+        />
         <Meta />
         <link rel='canonical' href='https://www.jorndoescode.lol' />
         <link rel='apple-touch-icon' sizes='180x180' href='/apple-touch-icon.png' />

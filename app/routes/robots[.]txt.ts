@@ -2,7 +2,8 @@ import { LoaderFunction, Response } from '@remix-run/node';
 
 export const loader: LoaderFunction = () => {
   const content = `
-    User-agent: *
+    User-Agent: *
+    Disallow:
 
     Host: https://www.jorndoescode.lol
     Sitemap: https://www.jorndoescode.lol/sitemap.xml
