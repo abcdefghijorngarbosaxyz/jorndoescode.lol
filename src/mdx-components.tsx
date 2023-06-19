@@ -10,6 +10,9 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </sub>
     ),
+    small: ({ children }) => (
+      <small className='font-display text-[12px] font-light text-neutral-500'>{children}</small>
+    ),
     b: ({ children }) => <b className='font-extrabold'>{children}</b>,
     em: ({ children }) => (
       <em className='font-serif text-[calc(1em_+_1px)] font-normal italic'>{children}</em>

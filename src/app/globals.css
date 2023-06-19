@@ -57,7 +57,6 @@ article > :not(:last-child) {
 article :where(p, li) {
   font-feature-settings: 'kern', 'frac', 'ss02';
 }
-
 a {
   @apply text-inherit underline decoration-neutral-300 decoration-[1px] underline-offset-2 transition-[text-decoration-color,_0.2s,_ease-in-out] hover:decoration-inherit dark:decoration-neutral-600;
 }
