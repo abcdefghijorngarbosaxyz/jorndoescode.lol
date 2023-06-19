@@ -54,122 +54,36 @@
 }
 
 *,
-:before,
-:after {
+::before,
+::after {
   @apply box-border;
 }
 
-b,
-strong {
-  @apply font-extrabold;
-}
-
-code,
-pre,
-kbd,
-samp {
-  @apply font-mono text-[1em];
-}
-
-sub,
-sup {
-  @apply relative align-baseline text-[60%] leading-[0];
-}
-
-sub {
-  @apply -bottom-[0.25em];
-}
-
-sup {
-  @apply -top-[0.5em];
-}
-
-button,
-input,
-optgroup,
-select,
-textarea {
-  @apply m-0 font-[inherit] text-[100%] leading-[1.15em];
-}
-
-blockquote {
-  @apply m-0;
-}
-
-a {
-  @apply text-inherit underline decoration-neutral-300 decoration-[1px] underline-offset-2 transition-[text-decoration-color,_0.2s,_ease-in-out] hover:decoration-inherit dark:decoration-neutral-600;
-}
-
-html,
 body {
-  @apply h-full bg-white font-sans font-light antialiased selection:bg-[rgb(229,_229,_229)] dark:bg-neutral-950 dark:selection:bg-[rgb(64,_64,_64)];
-
   text-rendering: optimizeLegibility;
-}
-
-html {
-  @apply scroll-pt-[calc(var(--header-height)_+_16px)] text-[16px];
-}
-
-body {
-  @apply m-0 overflow-x-hidden;
-}
-
-body > div {
-  @apply min-h-full pb-[env(safe-area-inset-bottom)] pl-[var(--margin-left)] pr-[var(--margin-right)];
-}
-
-main {
-  @apply relative mx-auto my-0 min-h-[calc(100vh_-_var(--footer-height))] max-w-[var(--page-width)] px-0 py-[var(--page-top)] max-md:max-w-[var(--content-width)];
-}
-
-main > div {
-  @apply grid grid-cols-[192px_var(--content-width)_192px] items-start gap-x-6 max-lg:grid-cols-[auto_var(--content-width_auto)] max-lg:gap-x-4 max-md:flex max-md:flex-col max-md:items-stretch max-md:justify-start;
+  font-feature-settings: 'kern', 'calt', 'case';
 }
 
 main > div > * {
   @apply col-start-2 col-end-auto;
 }
 
-article {
-  @apply relative w-full max-w-[var(--content-width)] text-[#404040] dark:text-[#d4d4d4];
-}
-
 article > :first-child {
   @apply mt-0;
 }
 
-article > :not(:last-child),
-article > code {
+article > :not(:last-child) {
   @apply mb-7;
 }
 
-article > :where(h1, h2, h3) {
-  @apply mb-7 mt-14;
-}
-
 article :where(p, li) {
-  @apply m-0 font-sans text-[16px] leading-7 tracking-normal;
   font-feature-settings: 'kern', 'frac', 'ss02';
-}
-
-article :where(b) {
-  @apply font-medium;
-}
-
-article :where(h1, h2, h3) {
-  @apply font-display text-[16px] font-semibold leading-7;
-  font-feature-settings: 'kern', 'calt', 'case';
-}
-
-article :where(em, i) {
-  @apply font-serif text-[calc(1em_+_1px)] font-normal italic;
 }
 
 article > h1 > span {
   @apply ml-2 text-xs text-[#6f6f6f] dark:text-[#a0a0a0];
 }
 
-article > blockquote {
-  @apply relative mb-7 text-[#6f6f6f] dark:text-[#a0a0a0];
+a {
+  @apply text-inherit underline decoration-neutral-300 decoration-[1px] underline-offset-2 transition-[text-decoration-color,_0.2s,_ease-in-out] hover:decoration-inherit dark:decoration-neutral-600;
 }
