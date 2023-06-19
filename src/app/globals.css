@@ -24,6 +24,10 @@
   font-weight: 300;
 }
 
+#email::after {
+  content: '@jorndoescode.lol';
+}
+
 :root {
   --font-fallback: -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
     'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
