@@ -5,10 +5,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Lausanne', 'var(--font-fallback)'],
-        serif: ['Newsreader', 'serif'],
+        sans: ['var(--font-lausanne)', 'var(--font-fallback)'],
+        serif: ['var(--font-newsreader)', 'serif'],
         mono: ['Menlo', 'monospace'],
-        display: ['Inter', 'var(--font-fallback)']
+        display: ['var(--font-inter)', 'var(--font-fallback)']
       }
     }
   },

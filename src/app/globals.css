@@ -2,28 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-  font-family: 'Inter';
-  font-display: block;
-  src: url('/fonts/Inter.woff2') format('woff2');
-  font-weight: 100 900;
-}
-
-@font-face {
-  font-family: 'Newsreader';
-  font-display: block;
-  src: url('/fonts/Newsreader.woff2') format('woff2');
-  font-weight: 400;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'Lausanne';
-  font-display: block;
-  src: url('/fonts/TWK-Lausanne.woff2') format('woff2');
-  font-weight: 300;
-}
-
 #email::after {
   content: '@jorndoescode.lol';
 }
@@ -78,10 +56,6 @@ article > :not(:last-child) {
 
 article :where(p, li) {
   font-feature-settings: 'kern', 'frac', 'ss02';
-}
-
-article > h1 > span {
-  @apply ml-2 text-xs text-[#6f6f6f] dark:text-[#a0a0a0];
 }
 
 a {
